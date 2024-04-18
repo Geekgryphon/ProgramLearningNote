@@ -1,0 +1,5 @@
+ 1. 單一職責原則(Single Responsibility Principle)
+ 2. 開放封閉原則(Open/Closed Principle)
+ 3. 里氏替換原則(Liskov Substitution Principle)
+ 4. 介面隔離原則(Interface Segregation Principle)
+ 5. 依賴反轉原則(Dependency Inversion Principle)
