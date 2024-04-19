@@ -1,61 +1,80 @@
 <?php
+// 產品
+class Product {
+    private $parts = [];
 
-// 抽象產品介面
-interface Product
-{
-    public function getName();
-}
+    public function addPart($part) {
+        $this->parts[] = $part;
+    }
 
-// 具體產品 A
-class ConcreteProductA implements Product
-{
-    public function getName()
-    {
-        return 'Product A';
+    public function listParts() {
+        echo "產品部件：" . implode(', ', $this->parts) . "\n";
     }
 }
 
-// 具體產品 B
-class ConcreteProductB implements Product
-{
-    public function getName()
-    {
-        return 'Product B';
+// 抽象建造者
+interface Builder {
+    public function buildPartA();
+    public function buildPartB();
+    public function buildPartC();
+    public function getResult(): Product;
+}
+
+// 具體建造者
+class ConcreteBuilder implements Builder {
+    private $product;
+
+    public function __construct() {
+        $this->product = new Product();
+    }
+
+    public function buildPartA() {
+        $this->product->addPart("部件 A");
+    }
+
+    public function buildPartB() {
+        $this->product->addPart("部件 B");
+    }
+
+    public function buildPartC() {
+        $this->product->addPart("部件 C");
+    }
+
+    public function getResult(): Product {
+        return $this->product;
     }
 }
 
-// 抽象工廠介面
-interface Factory
-{
-    public function createProduct();
-}
+// 指揮者
+class Director {
+    private $builder;
 
-// 具體工廠 A
-class ConcreteFactoryA implements Factory
-{
-    public function createProduct()
-    {
-        return new ConcreteProductA();
+    public function __construct(Builder $builder) {
+        $this->builder = $builder;
+    }
+
+    public function buildMinimalProduct() {
+        $this->builder->buildPartA();
+    }
+
+    public function buildFullFeaturedProduct() {
+        $this->builder->buildPartA();
+        $this->builder->buildPartB();
+        $this->builder->buildPartC();
     }
 }
 
-// 具體工廠 B
-class ConcreteFactoryB implements Factory
-{
-    public function createProduct()
-    {
-        return new ConcreteProductB();
-    }
-}
+// 客戶端代碼
+$builder = new ConcreteBuilder();
+$director = new Director($builder);
 
-// 使用具體工廠 A 創建具體產品 A
-$factoryA = new ConcreteFactoryA();
-$productA = $factoryA->createProduct();
-echo $productA->getName(); // 輸出：Product A
+// 建立最小配置的產品
+$director->buildMinimalProduct();
+$product = $builder->getResult();
+$product->listParts();
 
-// 使用具體工廠 B 創建具體產品 B
-$factoryB = new ConcreteFactoryB();
-$productB = $factoryB->createProduct();
-echo $productB->getName(); // 輸出：Product B
-
+// 建立全功能的產品
+$director->buildFullFeaturedProduct();
+$product = $builder->getResult();
+$product->listParts();
 ?>
