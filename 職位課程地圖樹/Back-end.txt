@@ -1,0 +1,180 @@
+推薦(私人推薦/選項)
+替代(替代選項/選這個或選推薦)
+不強求(非必要，隨時學都可以)
+
+
+網際網路
+-網際網路是如何運作的? 用戶端 (請求 / 回應) 伺服器端
+-甚麼是HTTP? 方法（如 GET、POST、PUT 等） + URL + 協定版本
+-甚麼是域名?(Domain Name)
+    子域名(如 www)  
+    二級域名(如yahoo youtube facebook)
+    頂級域名(頂級域名 如.com .org .net / 國家或地區頂級域名 如 .tw .jp .cn)
+-甚麼是託管?(Hosting)
+    共享託管
+    虛擬私人伺服器託管
+    專用伺服器託管
+    雲端託管
+    WordPress託管
+    託管服務提供商
+-甚麼是DNS? 是如何運作的?
+-甚麼是瀏覽器? 他們是如何運作?
+
+選一個程式語言
+-JavaScript(推薦)
+-Go(推薦)
+-Python(替代)
+-Ruby(替代)
+-Java(替代)
+-C#(替代)
+-PHP(替代)
+-Rust(替代)
+
+版本控制系統
+-Git
+
+版本控制系統的託管
+-GitHub
+-GitLab(替代)
+-Bitbucket(替代)
+
+關聯性資料庫
+-PostgreSQL(建議)
+-MySQL(替代)
+-MariaDB(替代)
+-MS SQL(替代)
+-Oracle(替代)
+-SQLite(替代)
+
+學習關於APIs
+-REST(建議)
+-JSON APIs(建議)
+-SOAP / gRPC(不強求)
+-GraphQL(不強求)
+-HATEOAS(不強求)
+-Open API Specs(不強求)
+
+    身份驗證
+      -JWT(建議)
+      -OAuth(建議)
+      -基礎身份驗證(建議)
+      -Token身份驗證(建議)
+      -基於Cookie的身份驗證(建議)
+      -OpenID(不強求)
+      -SAML(不強求)
+
+緩存
+-伺服器端
+    -Redis
+    -Memcached
+-CDN
+-客戶端
+
+網頁安全
+-MD5
+-SHA
+-script
+-bcrypt
+
+測試
+-集成測試(Integration Testing)
+-單元測試(Unit Testing)
+-功能測試(Functional Testing)
+
+CI / CD
+
+更多關於資料庫
+-ORMs
+-ACID
+-交易(Transactions)
+-N+1 問題
+-資料正規化(Normalization)
+-失效模式(Failure Modes)
+-性能分析(Profiling Performance)
+-遷移(Migrations)
+
+資料庫擴展
+-資料庫索引(建議)
+-資料複製(Data Replication)(不強求)
+-分片策略(Sharding Strategies)(不強求)
+-CAP Theorem(不強求)
+
+軟體設計與架構
+  架構模式
+  -單體架構(Monolithic Apps)
+  -微服務架構(Microservices)
+  -服務導向架構(SOA)
+  -無伺服器架構(Serverless)
+  -服務網格(Service Mesh)
+  -Twelve Factor Apps
+
+設計與開發原則
+-(23種設計模式)GOF Design Patterns
+-領域驅動設計(Domain Driven Design)
+-測試驅動開發(Test Driven Development)
+-CQRS(不強求)
+-Event Sourcing(不強求)
+
+容器化 vs 虛擬化
+-Docker
+-LXC
+-Kubernetes
+
+訊息代理(Message Brokers)
+-RabbitMQ
+-Kafka
+
+搜尋引擎
+-Elasticsearch
+-Solr
+
+Web 伺服器
+-Nginx
+-Apache
+-Caddy
+-MS IIS
+
+即時數據
+-Server Sent Events
+-WebSockets
+-Long Polling
+-Short Polling
+
+GraphQL
+    NoSQL Databases
+        Key-Value
+          -Redis
+          -DynamoDB
+        Document DBs
+          -MongoDB
+          -CouchDB
+        Realtime
+          -Firebase
+          -RethinkDB
+        Time Series
+          -Influx DB
+          -TimeScale
+        Column DBs
+          -Cassnadra
+          -Base
+        Graph DBs
+          -Neo4j
+          -AWS Neptune
+
+為擴展性構建(Building For Scale)
+    Difference & Usage
+    -Instrumentation
+    -Monitoring
+    -Telemetry
+    Mitigation Strategies
+    -Graceful Degradation
+    -Throtting
+    -Backpressure
+    -Loadshifting
+    -Circuit Breaker
+    Types of Scaling
+    Observability(Metrics logging and other observable items that can help in debugging and solving Issues 
+    when things go wrong.)
+
+
+DevOps初心者路徑地圖

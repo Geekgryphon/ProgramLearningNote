@@ -1,0 +1,153 @@
+遊戲數學
+    -線性代數(Linear Algebra)
+    -向量(Vector)
+    -矩陣(Matrix)
+    -線性變換(Linear Transformation)
+    -幾何學(Geometry)
+    -仿射空間(Affine Space)
+    -仿射轉換(Affine Transformation)
+    投影
+        -透視(Perspective)
+        -正交(Orthogonal)
+    方向
+        -四元數(Quaternion)
+        -歐拉角(Euler Angle)
+
+    曲線
+        -樣條曲線(Spline)
+        -埃爾米特矩陣(Hermite)
+        -貝茲曲線(Bezier)
+        -Catmull-Rom
+
+遊戲物理
+    動力學
+        -質心(Center of Mass)
+        -轉動慣量(Moment of Inertia)
+        -加速度(Acceleration)
+        -關節(Joints)
+        -恢復係數(Restitution)
+        -力(Force)
+        -角速度(Angular Velocity)
+        -浮力(Buoyancy)
+        -摩擦力(Friction)
+        -線速度(Linear Velocity)
+    碰撞檢測
+    -連續碰撞檢測(Continuous Collision Detection)
+    -Narrow Phase
+        -交集(Intersection)
+            -SAT
+            -GJK
+            -EPA
+        -凸性(Convexity)
+            -Convex
+                -Convex Hull
+            -Concave
+                -Convex Decomposition
+    -Broad Phase
+        -(包圍體)Bounding Volume
+            -AABB
+            -OBB
+        -(空間劃分)Spatial Partitioning
+            -Sort and Sweep
+            -BVH / DBVT
+
+
+遊戲引擎
+-Unity 3D
+-Unreal Engine
+-Native
+-Godot
+
+Programming Languages
+-C#
+-C / C++
+-Rust
+-Python
+-GDScript
+
+更深入
+
+Computer Graphics
+    Lighting and Shadow
+        -Stencil Shadow
+    Shadow Map
+        -2D
+        -Cube
+        -Cascaded
+    Light Source
+        -Directional
+        -Spotlights
+        -Infinte(沒有內容)
+        -Point Lights
+    Visibility and Occlusion
+    Occluder
+        -Fog
+    Culling
+        -Frustum Culling
+        -Light
+        -Shadow
+    Clipping
+        -Polygon
+        -Polyhedron
+    Shader
+        -Sampling
+        -Graphics Pipeline
+        -Rasterization
+        -Ray Tracing
+    Rendering Equation
+    Mapping
+        -Texture
+        -Bump
+        -Parallax
+        -Horizon
+    Reflection
+        -Diffuse
+        -Specular
+
+
+Graphics API
+    DirectX
+        -HLSL
+    OpenGL
+        -GLSL
+    Vulkan
+        -SPIR-V
+    OpenGL ES
+    Metal
+    WebGL
+    
+
+Game AI
+    Decision Making
+        -Decision Tree
+        -State Machine
+        -Behavior Tree
+        -Fuzzy Logic
+        -Markov System
+        -Goal Oriented Behavior
+    Movement
+    Board Game
+        -Minimax
+        -AB Pruning
+        -MCTS
+    Learning
+        -Naive Bayes Classifier
+        -Decision Learning
+        -Reinforcements Learning
+        -Decision Tree Learning
+        -Deep Learning
+        -Artificial Neutral Network
+
+
+Advanced Rendering
+    Physically-Based Rendering
+        -Microsurface Scattering
+        -Conservation of Energy
+        -Conservation of Energy
+        -Metallicity
+    Real-Time Ray Tracing
+        -DirectX Ray Tracing
+        -Vulkan Ray Tracing
+        -OptiX
+
+

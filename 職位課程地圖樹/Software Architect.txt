@@ -1,0 +1,139 @@
+了解基礎
+-什麼是軟體架構
+-什麼是軟體架構師
+-架構層次
+  企業架構(Enterprise Architecture)
+  解決方案層級架構(Solution Architecture)
+  應用架構(Application Architecture)
+
+職責與責任
+-Tech Decisions
+-Design & Architecture Decisions
+-Requirements Elicitation
+-Documentation
+-Enforcing Standards
+-Collaborate with Others
+-Consult & Coach Developers
+
+該學習的重要技巧
+-Design & Architecture
+-Decision Making
+-Simplifying Things
+-如何寫Code
+-Documentation
+-Communication
+-Estimate and Evaluate
+-Balance
+-Consult & Coach
+-Marketing Skills
+
+程式語言
+-Java / Kotlin / Scala 
+-Python 
+-Ruby
+-Go
+-JavaScript / TypeScript
+-.NET Framework Based
+
+Patterns & Design Principles
+-MVC, MVP, MVVM
+-CQRS, Eventual Consistency 
+-OOP
+-Actors
+-ACID, CAP Theorem
+-SOLID
+-TDD
+-DDD
+
+工具
+-Git / GitHub
+-Slack
+-Trello
+-Atlassion Tools
+
+Architecture
+-Microservices
+-Serverless
+-Client / Server
+-Layered 
+-Distributed Systems 
+-Service Oriented 
+
+安全
+-Hashing Algorithms
+-PKI
+-OWASP
+-Auth Strategies
+
+Working with Data
+-Hadoop, Spark, MapReduce
+-ETL, Datawarehouses
+-SQL Databases
+-NoSQL Databases
+
+ Analytics
+ -Apache Spark
+ -Hadoop
+ -Datawarehouse Principles 
+
+
+APIs & Integrations
+-gRPC
+-ESB, SOAP 
+-REST
+-GraphQL
+-BPM, BPEL
+-Messaging Queues 
+
+Web, Mobile
+-Reactive Programming
+-Functional Programming
+-React, Vue, Angular
+-SPA, SSP, SSG
+-Microfrontends
+-W3C and WHATWG
+
+Frameworks
+-BABOK
+-IAF
+-UML
+-TOGAF
+
+Management
+  Certifications
+    -PMI 
+    -ITIL
+    -RUP
+    -Prince2
+  Agile Model
+    -LeSS
+    -SaFE
+    -XP
+    -Kanban
+    -Scrum
+
+Networks
+  -OSI
+  -TCP/IP Model
+  -HTTP, HTTPS
+  -Proxies
+  -Firewalls
+
+Operations Knowledge 
+-Infrastructure as Code
+-Cloud Providers
+-Serverless Concepts
+-Linux / Unix
+-Service Mesh
+-CI / CD
+-Containers
+-Cloud Design Patterns
+
+Enterprise Software
+-MS Dynamics
+-SAP ERP, HANA, Business Objects
+-EMC DMS
+-IBM BPM
+-Salesforce 
+
+查看網管生涯地圖

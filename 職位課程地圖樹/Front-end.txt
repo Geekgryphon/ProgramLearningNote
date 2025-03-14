@@ -1,0 +1,127 @@
+推薦(私人推薦/選項)
+替代(替代選項/選這個或選推薦)
+不強求(非必要，隨時學都可以)
+
+網際網路
+-網際網路是如何運作的?
+-甚麼是HTTP
+-甚麼是域名(Domain Name)
+-甚麼是託管(Hosting)
+-甚麼是DNS? 是如何運作的?
+-甚麼是瀏覽器? 他們是如何運作?
+
+HTML
+-學習基本知識
+-撰寫語意化(Semantic) HTML 例如<html> , <body> 
+-表單(Forms)和驗證(Validations)
+-無障礙性(Accessibility)
+-搜尋引擎優化(SEO Basics)
+
+CSS
+-學習基本知識
+-製作網站佈局(layout)
+-響應式設計
+
+JavaScripts
+-學習基本知識
+-學習DOM 操作
+-Fetch API 現代 / Ajax (XHR) 舊有方法
+
+版本控制系統
+-Git
+
+版本控制系統的託管
+-GitHub
+-GitLab
+-Bitbucket
+
+包管理工具
+-npm
+-pnpm
+-yarn
+
+選一個框架
+-React(建議)
+-Vue.js
+-Angular
+-Svelte
+-Solid JS
+-Qwik
+
+撰寫CSS
+-Taliwind
+
+CSS建構(不強求)
+-BEM
+
+CSS預備器(不強求)
+-SASS
+-PostCSS
+
+建造工具
+    Linters 和 formatters
+    Module Bundlers
+    -Vite
+    -SWC / esbuild
+    -Webpack
+    -Rollup
+    -Parcel
+
+測試
+    Vitest(建議)
+    Jest
+
+身分驗證策略
+-JWT, OAuth, SSO, Basic Auth, Session Auth
+
+網頁安全基礎
+-CORS
+-HTTPS
+-CSP(Content Security Policy)
+-OWASP Security Risks
+
+網頁組件(不強求)
+-HTML範例
+-客製化元素
+-Shadow DOM
+
+型別檢查器(Type Checkers)
+-TypeScript
+
+SSR
+-React(建議)->Next.js, Astro, react-router
+-Angular
+-Vue.js->Nuxt.js
+-Svelte->Svelte Kit
+
+GraphQL
+-Apollo(建議)
+-Reiay Modern
+
+PWAs(非必要隨時都可學)
+    Measure & Improve Perf.
+        -PRPL Pattern
+        -RAIL Model
+        -Performance Metrics
+        -Using Lighthouse
+        -Using DevTools
+    Browser APIs
+        -Storage
+        -Web Sockets
+        -Server Sent Events
+        -Service Workers
+        -Location
+        -Notifications
+        -Device Orientation
+        -Payments
+        -Credentials
+
+Static Site Generators
+-Nuxt.js
+
+Moblie Apps(非必要隨時都可學)
+
+Desktop Apps
+- Electron
+- Tauri
+- Flutter
