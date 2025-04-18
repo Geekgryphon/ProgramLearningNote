@@ -1,0 +1,78 @@
+Getting Started - Installation
+    Composer / Laravel Herd
+Getting Started - Configuration
+    php artisan about
+    php artisan about --only=environment
+    php artisan config:show database
+    php artisan env:encrypt
+    php artisan env:encrypt --key=3UVsEgGVK36XN82KKeyLFMhvosbZN1aF
+    php artisan env:encrypt --env=staging
+    php artisan env:decrypt --key=qUWuNRdfuImXcKxZ --cipher=AES-128-CBC
+    php artisan env:decrypt --env=staging
+    php artisan env:decrypt --force
+
+
+    use Illuminate\Support\Facades\Config;
+
+    $value = Config::get('app.timezone');
+    $value = config('app.timezone');
+
+    // Retrieve a default value if the configuration value does not exist...
+    $value = config('app.timezone', 'Asia/Seoul');
+
+    Config::set('app.timezone', 'America/Chicago');
+    config(['app.timezone' => 'America/Chicago']);
+
+    Config::string('config-key');
+    Config::integer('config-key');
+    Config::float('config-key');
+    Config::boolean('config-key');
+    Config::array('config-key');
+
+    php artisan config:clear
+
+    php artisan config:publish
+    php artisan config:publish --all
+    php artisan down
+    php artisan down --refresh=15
+    php artisan down --retry=60
+    php artisan down --secret="1630542a-246b-4b66-afa1-dd72a4c43515"
+    php artisan down --with-secret
+    php artisan down --render="errors::503"
+    php artisan down --redirect=/
+
+    php artisan up
+
+Getting Started - Directory Structure
+    app/         目錄包含了你應用程式的核心程式碼，應用程式中的**幾乎所有類別（classes）**都會放在這個目錄裡。
+    bootstrap/   bootstrap 目錄包含了一個 app.php 檔案，這個檔案負責啟動整個 Laravel 框架。此外，這個目錄裡也有一個 cache 子目錄，用來存放框架為了效能優化而產生的檔案
+    config/      包含了你整個應用程式的所有設定檔案。
+    database/    包含了你的資料庫遷移（migrations）、模型工廠以及資料填充器(seeds）。如果你有需要，也可以將 SQLite 資料庫檔案放在這個目錄中。
+    public/      包含了一個 index.php 檔案，這個檔案是所有進入你應用程式的請求的入口點（entry point），並且設定自動載入（autoloading）。這個目錄也用來放置你的前端資源檔案（assets），例如圖片、JavaScript 和 CSS。
+    resource/    包含了你的視圖（views）以及未編譯的原始資源檔案（例如 CSS 或 JavaScript）。
+    routes/      包含了你應用程式中所有的路由定義。
+    storage/     包含了你的日誌檔案（logs）、編譯過的 Blade 模板、基於檔案的 session、檔案快取，以及框架產生的其他檔案。
+    tests/       目錄包含了你的自動化測試。預設會提供範例的 Pest 或 PHPUnit 單元測試和功能測試。每個測試類別應該以 Test 作為後綴。你可以使用 /vendor/bin/pest 或 /vendor/bin/phpunit 指令來執行測試。
+                 或者，如果你希望以更詳細且美觀的方式顯示測試結果，可以使用 php artisan test 這個 Artisan 指令來執行測試。
+    vendor/      包含了你的 Composer 依賴。
+
+Getting Started - Frontend
+    @foreach()
+    @endforeach()
+
+    @php
+    @endphp
+
+    livewire, starterkit, inertia
+    Laravel Cloud, Laravel Forge
+    Tailwind, Vite
+
+Getting Started - Deployment
+    Nginx, FrankenPHP
+
+    php artisan optimize
+    php artisan optimize:clear
+    php artisan config:cache
+    php artisan event:cache
+    php artisan route:cache
+    php artisan view:cache

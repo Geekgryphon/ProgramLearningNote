@@ -1,0 +1,26 @@
+Architecture Concepts - Request Lifecycle
+
+1. 接收到請求
+2. 請求都由您的 Web 伺服器（Apache / Nginx）配置定向到此檔案 public/index.php  加載框架其餘部分的起點
+3. 載入 bootstrap/app.php 並使其建立應用程式/服務容器的實例。
+HTTP / Console Kernels
+4.根據進入應用程式的請求類型，使用應用程式實例的handleRequest或方法將傳入的請求傳送到 HTTP 核心或控制台核心。
+handleCommand這兩個核心是所有請求流經的中心位置。
+HTTP 核心也負責透過應用程式的中間件堆疊傳遞請求。這些中間件處理讀取和寫入HTTP 會話、確定應用程式是否處於維護模式、驗證 CSRF 令牌等。
+接收一個Request並傳回一個Response。
+Service Providers
+5.最重要的核心引導操作之一是為您的應用程式載入服務提供者。服務提供者負責引導框架的所有各種元件，例如資料庫、佇列、驗證和路由元件。
+Laravel 將遍歷此提供者清單並實例化其中的每一個。實例化提供者後，register將在所有提供者上呼叫該方法。然後，一旦所有提供者都已註冊，boot就會在每個提供者上呼叫該方法。
+這樣，服務提供者可能依賴在boot執行其方法時已註冊且可用的每個容器綁定。
+Routing
+6. 一旦應用程式引導完畢並且所有服務提供者都已註冊，Request就會交給路由器進行調度。
+路由器將把請求分派到路由或控制器，並運行任何特定於路由的中間件。
+
+如果請求通過所有匹配的路由分配的中間件，則將執行路由或控制器方法，並透過路由的中間件鏈將路由或控制器方法傳回的回應傳送回。
+
+
+Browser → public/index.php → (HTTP/控制台內核)Kernel → Middleware → Route → Controller → Response → Browser
+
+Architecture Concepts - Service Container
+Architecture Concepts - Service Providers
+Architecture Concepts - Facades

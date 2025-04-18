@@ -1,0 +1,472 @@
+BASE STYLES👾
+    Preflight (CSS預設樣式)
+LAYOUT👾
+    aspect-ratio(元素寬度與其高度的比率 主要應用在圖片，卡片，影片)
+    column(將文本或內容分為多列顯示)
+        columns-3xs (長度)
+        columns-auto
+        columns-2 (數量)
+    break-after(控制元素後面是否會強制分頁或換行)
+        break-after-auto
+        break-after-avoid
+        break-after-all
+        break-after-avoid-page
+        break-after-page
+        break-after-left
+        break-after-right
+        break-after-column
+    break-before(控制元素前面是否強制進行分頁或換行)
+        break-before-auto
+        break-before-avoid
+        break-before-all
+        break-before-avoid-page
+        break-before-page
+        break-before-left
+        break-before-right
+        break-before-column
+    break-inside(控制元素是否可以在頁面或欄的邊界處被切割)
+        break-inside-auto
+        break-inside-avoid
+        break-inside-avoid-page
+        break-inside-avoid-column
+    box-decoration-break(控制當元素的邊框、背景)
+        box-decoration-clone
+        box-decoration-slice
+    box-sizing(用來控制元素的寬度和高度計算方式)
+        box-border
+        box-content
+    display(用來控制元素的顯示方式)
+        inline (它只佔據其內容的寬度，並且不會創建新的一行)
+        block 
+            元素寬度預設會撐到最大，使其占滿整個容器
+            可以設定長寬/margin/padding，但仍會占滿一整行
+            強制換行
+        inline-block
+        (一維佈局) 規則單一
+        flex 
+        inline-flex
+        (二維佈局) 劃分大小不同的個別區塊
+        grid 
+        inline-grid
+
+        flow-root (新版取代float和clear的寫法)
+        contents (移除一些無用的標籤（例如包裝元素），但仍然需要其子元素存在)
+        table (讓元素的佈局行為像 HTML 表格一樣。這樣設置的元素將繼承一些表格布局特性)
+        inline-table 
+        table-caption
+        table-cell 
+        table-column table-column-group
+        table-footer-group table-header-group
+        table-row-group table-row
+        list-item (使得元素的佈局行為像 HTML 的列表項目（<li>）一樣)
+        hidden (隱藏該元件)
+    float
+        float-right
+        float-left
+        float-start
+        float-end
+        float-none
+    clear
+        clear-left
+        clear-right
+        clear-both
+        clear-start
+        clear-end
+        clear-none
+    isolation(影響元素的層疊上下文，尤其是在某些情況下，控制元素的混合模式和遮罩效果。)
+        isolate
+        isolation-auto
+    object-fit(用來控制替換元素（例如圖片、影片等）的內容如何調整大小以適應容器。通常會應用於 <img>、<video> 或 <iframe> 等元素)
+        object-contain
+        object-cover
+        object-fill
+        object-none
+        object-scale-down
+    object-position
+        object-bottom
+        object-center
+        object-left
+        object-left-bottom
+        object-left-top
+        object-right
+        object-right-bottom
+        object-right-top
+        object-top
+    overflow(用於控制當內容超出其容器時，如何處理溢出的部分。這個屬性常見於設計滾動條或隱藏內容。)
+        overflow-auto
+        overflow-hidden
+        overflow-clip
+        overflow-visible
+        overflow-scroll
+        可指定單邊
+        overflow-x-auto
+        overflow-y-auto
+    overscroll-behavior(用於控制當滾動區域達到邊界時的行為。這個屬性可以幫助我們定義
+                        滾動內容在超出邊界時的顯示效果，通常用於移動設備或觸控設備上的滾動體驗)
+        overscroll-auto
+        overscroll-contain
+        overscroll-none
+        可設定單邊
+        overscroll-x-auto
+        overscroll-y-auto
+    position
+        static(預設值)
+        fixed(元素相對於瀏覽器窗口進行定位，無論頁面滾動多遠，元素始終保持在指定的位置)
+        absolute
+        relative
+        sticky(元素在滾動過程中會根據視口的位置變化而改變定位行為。當滾動到指定位置時，
+               元素會像 fixed 一樣固定在頁面上；當滾動過後，元素會回到正常的文檔流中。)
+    top / right / bottom / left
+    visibility (會讓元素不可見，但仍保留在頁面布局中，佔據空間)
+        visible
+        invisible
+        collapse
+    z-index 
+        z-1
+        z-auto
+    
+
+FLEXBOX & GRID
+    flex-basis
+        basis-1
+        basis-full
+        basis-auto
+        basis-xs
+    flex-direction
+        flex-row
+        flex-row-reverse
+        flex-col
+        flex-col-reverse
+    flex-wrap
+        flex-nowrap
+        flex-wrap
+        flex-wrap-reverse
+    flex
+        flex-auto
+        flex-initial
+        flex-none
+    flex-grow
+        grow
+        grow-1
+    flex-shrink
+        shrink
+        shrink-1
+    order
+        order-1
+        -order-1
+        order-first
+        order-last
+        order-none
+    grid-template-columns
+        grid-cols-2
+        grid-cols-none
+        grid-cols-subgrid
+    grid-column
+        col-span-full
+        col-span-4
+        col-start-4
+        -col-start-4
+        col-end-1
+        -col-end-1
+        col-end-auto
+        col-auto
+        col-2
+        -col-4
+    grid-template-rows
+        grid-rows-2
+        grid-rows-none
+        grid-rows-subgrid
+    grid-row
+        row-span-full
+        row-span-4
+        row-start-4
+        -row-start-4
+        row-end-1
+        -row-end-1
+        row-end-auto
+        row-auto
+        row-2
+        -row-4
+    grid-auto-flow
+        grid-flow-row
+        grid-flow-col
+        grid-flow-dense
+        grid-flow-row-dense
+        grid-flow-col-dense
+    grid-auto-columns
+        auto-cols-auto
+        auto-cols-min
+        auto-cols-max
+        auto-cols-fr
+        auto-cols-2
+    grid-auto-rows
+        auto-rows-auto
+        auto-rows-min
+        auto-rows-max
+        auto-rows-fr
+        auto-rows-2
+    gap
+        gap-1
+        gap-x-1
+        gap-y-1
+    justify-content
+        justify-start
+        justify-end
+        justify-center
+        justify-between
+        justify-around
+        justify-evenly
+        justify-stretch
+        justify-baseline
+        justify-normal
+    justify-items
+        justify-items-start
+        justify-items-end
+        justify-items-center
+        justify-items-stretch
+        justify-items-normal
+    justify-self
+        justify-self-auto
+        justify-self-start
+        justify-self-end
+        justify-self-center
+        justify-self-stretch
+    align-content
+        content-normal
+        content-center
+        content-start
+        content-end
+        content-between
+        content-around
+        content-evenly
+        content-stretch
+        content-baseline
+    align-items
+        items-start
+        items-end
+        items-center
+        items-stretch
+        items-normal
+    align-self 
+        self-auto
+        self-start
+        self-end
+        self-center
+        self-stretch
+        self-baseline
+    place-content
+        place-content-center
+        place-content-start
+        place-content-end
+        place-content-between
+        place-content-around
+        place-content-evenly
+        place-content-baseline
+        place-content-stretch
+    place-items
+        place-items-start
+        place-items-end
+        place-items-center
+        place-items-baseline
+        place-items-stretch
+    place-self
+        place-self-auto
+        place-self-start
+        place-self-end
+        place-self-center
+        place-self-stretch
+
+SPACING👾
+    padding (內容與邊框的距離)
+        p-1
+        -p-1
+        px-1
+        -px-1
+        py-1
+        -py-1
+        ps-1
+        -ps-1
+        pe-1
+        -pe-1
+        pt-1
+        -pt-1
+        pr-1
+        -pr-1
+        pb-1
+        -pb-1
+        pl-1
+        -pl-1
+    margin (元素的外距)
+        m-1
+        -m-1
+        m-auto
+        mx-1
+        -mx-1
+        mx-auto
+        my-1
+        -my-1
+        my-auto
+        ms-1
+        -ms-1
+        ms-auto
+        me-1
+        -me-1
+        me-auto
+        mt-1
+        -mt-1
+        mt-auto
+        mr-1
+        -mr-1
+        mr-auto
+        mb-1
+        -mb-1
+        mb-auto
+        ml-1
+        -ml-1
+        ml-auto
+        md:mt-8
+
+SIZING👾 
+    width
+    min-width
+    max-width
+    height
+    min-height
+    max-height
+
+TYPOGRAPHY
+    font-family
+    font-size
+    font-smoothing
+    font-style
+    font-weight
+    font-stretch
+    font-variant-numeric
+    letter-spacing
+    line-clamp
+    line-height
+    list-style-image
+    list-style-position
+    list-style-type
+    text-align
+    color
+    text-decoration-line
+    text-decoration-color 
+    text-decoration-style
+    text-decoration-thickness
+    text-underline-offset
+    text-transform
+    text-overflow
+    text-wrap
+    text-indent
+    vertical-align
+    white-space
+    word-break
+    hyphens
+    content 
+BACKGROUNDS👾
+    background-attachment(控制背景圖片是否隨著頁面滾動而滾動)
+    background-clip(用來控制背景的顯示區域)
+    background-color
+    background-image(設置背景圖片的路徑，可以是相對路徑或絕對路徑)
+    background-origin(用來控制背景圖片的位置基準點)
+    background-position(用來設置背景圖片的位置)
+    background-repeat(用來控制背景圖片是否重複以及如何重複)
+    background-size(用來控制背景圖片的大小)
+BORDERS👾
+    (margin border padding content)
+    border-radius
+    border-width
+    border-color
+    border-style
+    (outline border content)
+    外邊框（outline）
+    outline-width
+    outline-color
+    outline-style
+    outline-offset 
+EFFECTS
+    box-shadow
+    opacity
+    mix-blend-mode
+    background-blend-mode
+FILTERS👾
+    filter (元素應用圖形效果（如模糊、對比度調整、灰度等）)
+        blur
+        brightness
+        contrast
+        drop-shadow
+        grayscale
+        hue-rotate
+        invert
+        saturate
+        sepia
+    backdrop-filter (用於對元素背後的區域進行圖形效果處理)
+        blur
+        brightness
+        contrast
+        grayscale
+        hue-rotate 
+        invert
+        opacity
+        saturate
+        sepia 
+TABLES
+    border-collaps
+    border-spacing
+    table-layout
+    caption-side
+TRANSITIONS & ANIMATION
+    transition-property
+    transition-behavior
+    transition-duration
+    transition-timing-function
+    transition-delay
+    animation
+TRANSFORMS
+    backface-visibility
+    perspective
+    perspective-origin
+    rotate
+    scale
+    skew
+    transform
+    transform-origin
+    transform-style
+    translate
+INTERACTIVITY
+    accent-color
+    appearance
+    caret-color
+    color-scheme
+    cursor
+    field-sizing
+    pointer-events
+    resize
+    scroll-margin
+    scroll-padding
+    scroll-snap-align
+    scroll-snap-stop
+    scroll-snap-type
+    touch-action
+    user-select
+    will-change 
+SVG
+    fill
+        fill-none
+        fill-inherit
+        fill-current
+        fill-transparent
+        fill-red-100
+    stroke (邊框顏色)
+        stroke-none
+        stroke-inherit
+        stroke-current
+        stroke-transparent
+        stroke-red-100
+    stroke-width(邊框框度)
+        stroke-1 
+ACCESSIBILITY👾
+    當使用者開啟高對比度模式會自動變換當前的顏色
+    forced-color-adjust-auto
+    forced-color-adjust-none

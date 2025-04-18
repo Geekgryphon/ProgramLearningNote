@@ -1,0 +1,143 @@
+The Basics - Routing
+
+    routes/web.php
+
+        use Illuminate\Support\Facades\Route;
+        use App\Http\Controllers\UserController;
+
+        Route::get('/user', [UserController::class, 'index']); 
+
+        Route::get('/greeting', function () {
+            return 'Hello World';
+        });
+
+        Route::get('/user', function (Request $request) {
+            return $request->user();
+        })->middleware('auth:sanctum');
+
+    Laravel Sanctum api驗證系統
+
+    Route::get($uri, $callback);
+    Route::post($uri, $callback);
+    Route::put($uri, $callback);
+    Route::patch($uri, $callback);
+    Route::delete($uri, $callback);
+    Route::options($uri, $callback);
+
+    Route::match(['get', 'post'], '/', function () {
+        // ...
+    });
+
+    Route::any('/', function () {
+        // ...
+    });
+
+    //-----------------------------------------------------------
+
+    use Illuminate\Http\Request;
+ 
+    Route::get('/users', function (Request $request) {
+        // ...
+    });
+
+    //------------------------------------------------------------
+
+    Route::redirect('/here', '/there');
+    Route::redirect('/here', '/there', 301);
+    Route::permanentRedirect('/here', '/there');
+    Route::view('/welcome', 'welcome');
+    Route::view('/welcome', 'welcome', ['name' => 'Taylor']);
+
+    php artisan route:list
+    php artisan route:list -v   
+    php artisan route:list -vv
+    php artisan route:list --path=api
+    php artisan route:list --except-vendor
+    php artisan route:list --only-vendor
+
+    //-------------------------------------------------------------------
+
+    use Illuminate\Foundation\Application;
+
+    return Application::configure(basePath: dirname(__DIR__))
+        ->withRouting(
+            web: __DIR__.'/../routes/web.php',
+            commands: __DIR__.'/../routes/console.php',
+            health: '/up',
+        )->create();
+
+    //------------------------------------------------------------------
+
+    use Illuminate\Support\Facades\Route;
+
+    ->withRouting(
+        web: __DIR__.'/../routes/web.php',
+        commands: __DIR__.'/../routes/console.php',
+        health: '/up',
+        then: function () {
+            Route::middleware('api')
+                ->prefix('webhooks')
+                ->name('webhooks.')
+                ->group(base_path('routes/webhooks.php'));
+        },
+    )
+
+    //-----------------------------------------------------------------
+
+    use Illuminate\Support\Facades\Route;
+
+    ->withRouting(
+        commands: __DIR__.'/../routes/console.php',
+        using: function () {
+            Route::middleware('api')
+                ->prefix('api')
+                ->group(base_path('routes/api.php'));
+
+            Route::middleware('web')
+                ->group(base_path('routes/web.php'));
+        },
+    )
+
+    //--------------------------------------------------------------
+
+    Route::get('/posts/{post}/comments/{comment}', function (string $postId, string $commentId) {
+        // ...
+    });
+
+    Route::get('/user/{name}', function (string $name) {
+        // ...
+    })->where('name', '[A-Za-z]+');
+
+    Route::get('/user/{id}', function (string $id) {
+        // ...
+    })->where('id', '[0-9]+');
+
+    Route::get('/user/{id}/{name}', function (string $id, string $name) {
+        // ...
+    })->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
+
+    //--------------------------------------------------------------------------------
+
+    Route::get('/user/{id}/{name}', function (string $id, string $name) {
+    // ...
+    })->whereNumber('id')->whereAlpha('name');
+
+    Route::get('/user/{name}', function (string $name) {
+        // ...
+    })->whereAlphaNumeric('name');
+
+    Route::get('/user/{id}', function (string $id) {
+        // ...
+    })->whereUuid('id');
+
+    Route::get('/user/{id}', function (string $id) {
+        // ...
+    })->whereUlid('id');
+
+    Route::get('/category/{category}', function (string $category) {
+        // ...
+    })->whereIn('category', ['movie', 'song', 'painting']);
+
+    Route::get('/category/{category}', function (string $category) {
+        // ...
+    })->whereIn('category', CategoryEnum::cases());

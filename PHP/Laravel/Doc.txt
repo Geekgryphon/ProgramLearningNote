@@ -1,0 +1,35 @@
+The Basics - 
+The Basics - 
+The Basics - 
+The Basics - 
+The Basics - 
+The Basics - 
+The Basics - 
+The Basics - 
+The Basics - 
+The Basics - 
+The Basics - 
+The Basics - 
+The Basics - 
+
+
+Eloquent ORM
+
+    $table->id();
+    $table->string('');
+    $table->timestamps();
+
+    $table->comment('Business calculations');
+
+    php artisan migrate:refresh --seed
+
+
+    php artisan migrate:status
+    php artisan migrate --pretend
+    php artisan migrate --isolated
+    php artisan migrate --force
+    php artisan migrate:rollback
+    php artisan migrate:rollback --step=5
+    php artisan migrate:rollback --batch=3
+    php artisan migrate:reset
+    php artisan migrate:fresh --database=admin
